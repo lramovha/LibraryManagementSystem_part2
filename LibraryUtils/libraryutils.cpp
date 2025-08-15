@@ -24,7 +24,7 @@ bool LibraryUtils::saveItems(const QList<LibraryItem*>& items, const QString& fi
 
     // Iterate through each library item and write details to the file
     for (const auto* item : items) {
-        // Use dynamic_cast to determine the actual type (Book or Magazine)
+        // Ussing dynamic_cast to determine the actual type (Book or Magazine)
         if (Book* b = dynamic_cast<Book*>(const_cast<LibraryItem*>(item))) {
             out << "Book," << b->getId() << "," << b->getTitle() << "," << b->getAuthor() << "," << b->getGenre() << "," << b->isBorrowed() << "\n";
         } else if (Magazine* m = dynamic_cast<Magazine*>(const_cast<LibraryItem*>(item))) {
