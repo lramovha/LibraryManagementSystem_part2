@@ -1,4 +1,4 @@
 Book,B001,The Great Gatsby,F. Scott Fitzgerald,Fiction,0
-Magazine,M001,National Geographic,Various,123,0
+Magazine,M001,National Geographic,Various,123,1
 Book,777,Durango,Lasy M. Ramovha,Non-Fiction,0
 Magazine,023,Zola,Tshepo Mashini,5,0

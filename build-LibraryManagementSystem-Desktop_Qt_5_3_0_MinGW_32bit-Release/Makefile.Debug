@@ -17,7 +17,7 @@ CXXFLAGS      = -pipe -fno-keep-inline-dllexport -g -std=c++0x -frtti -Wall -Wex
 INCPATH       = -I..\LibraryManagementSystem -I"..\LibraryUtils" -I"C:\Qt\Qt5.3.0\5.3\mingw482_32\include" -I"C:\Qt\Qt5.3.0\5.3\mingw482_32\include\QtWidgets" -I"C:\Qt\Qt5.3.0\5.3\mingw482_32\include\QtGui" -I"C:\Qt\Qt5.3.0\5.3\mingw482_32\include\QtCore" -I"debug" -I"." -I"." -I"C:\Qt\Qt5.3.0\5.3\mingw482_32\mkspecs\win32-g++"
 LINKER      =        g++
 LFLAGS        =        -Wl,-subsystem,windows -mthreads
-LIBS        =        -lglu32 -lopengl32 -lgdi32 -luser32 -lmingw32 -lqtmaind "-LC:/Users/lasyr/Desktop/ZaLes/School/2025/UNISA/COS2614 - Programming Contemporary Concepts/assignment3/LibraryManagementSystem_part2/build-LibraryUtils-Desktop_Qt_5_3_0_MinGW_32bit-Release/release" -lLibraryUtils -LC:/Qt/Qt5.3.0/5.3/mingw482_32/lib -lQt5Widgetsd -lQt5Guid -lQt5Cored 
+LIBS        =        -lglu32 -lopengl32 -lgdi32 -luser32 -lmingw32 -lqtmaind "-LC:/Users/lasyr/Desktop/ZaLes/School/2025/UNISA/COS2614 - Programming Contemporary Concepts/assignment3/LibraryManagementSystem_part2/LibraryManagementSystem/../build-LibraryUtils-Desktop_Qt_5_3_0_MinGW_32bit-Release/release" -lLibraryUtils -LC:/Qt/Qt5.3.0/5.3/mingw482_32/lib -lQt5Widgetsd -lQt5Guid -lQt5Cored 
 QMAKE         = C:\Qt\Qt5.3.0\5.3\mingw482_32\bin\qmake.exe
 IDC           = idc
 IDL           = midl
@@ -218,6 +218,9 @@ debug/moc_mainwindow.cpp: C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtWidgets/QMainW
 		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtGui/qicon.h \
 		../LibraryUtils/LibraryUtils.h \
 		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtCore/QString \
+		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtCore/QList \
+		../LibraryManagementSystem/libraryitem.h \
+		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtCore/QDebug \
 		../LibraryManagementSystem/mainwindow.h
 	C:\Qt\Qt5.3.0\5.3\mingw482_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/Qt/Qt5.3.0/5.3/mingw482_32/mkspecs/win32-g++ -I"C:/Users/lasyr/Desktop/ZaLes/School/2025/UNISA/COS2614 - Programming Contemporary Concepts/assignment3/LibraryManagementSystem_part2/LibraryManagementSystem" -I"C:/Users/lasyr/Desktop/ZaLes/School/2025/UNISA/COS2614 - Programming Contemporary Concepts/assignment3/LibraryManagementSystem_part2/LibraryUtils" -IC:/Qt/Qt5.3.0/5.3/mingw482_32/include -IC:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtWidgets -IC:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtGui -IC:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtCore -I. ..\LibraryManagementSystem\mainwindow.h -o debug\moc_mainwindow.cpp
 
@@ -347,6 +350,9 @@ debug/main.o: ../LibraryManagementSystem/main.cpp ../LibraryManagementSystem/mai
 		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtGui/qicon.h \
 		../LibraryUtils/LibraryUtils.h \
 		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtCore/QString \
+		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtCore/QList \
+		../LibraryManagementSystem/libraryitem.h \
+		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtCore/QDebug \
 		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtWidgets/QApplication \
 		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtWidgets/qapplication.h \
 		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtCore/qcoreapplication.h \
@@ -462,9 +468,68 @@ debug/mainwindow.o: ../LibraryManagementSystem/mainwindow.cpp ../LibraryManageme
 		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtGui/qicon.h \
 		../LibraryUtils/LibraryUtils.h \
 		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtCore/QString \
-		ui_mainwindow.h \
+		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtCore/QList \
 		../LibraryManagementSystem/libraryitem.h \
 		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtCore/QDebug \
+		ui_mainwindow.h \
+		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtCore/QVariant \
+		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtWidgets/QAction \
+		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtWidgets/qaction.h \
+		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtWidgets/qactiongroup.h \
+		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtWidgets/QApplication \
+		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtWidgets/qapplication.h \
+		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtCore/qcoreapplication.h \
+		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtCore/qeventloop.h \
+		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtWidgets/qdesktopwidget.h \
+		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtGui/qguiapplication.h \
+		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtGui/qinputmethod.h \
+		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtWidgets/QButtonGroup \
+		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtWidgets/qbuttongroup.h \
+		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtWidgets/QHeaderView \
+		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtWidgets/qheaderview.h \
+		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtWidgets/qabstractitemview.h \
+		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtWidgets/qabstractscrollarea.h \
+		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtWidgets/qframe.h \
+		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtCore/qabstractitemmodel.h \
+		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtCore/qitemselectionmodel.h \
+		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtWidgets/qabstractitemdelegate.h \
+		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtWidgets/qstyleoption.h \
+		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtWidgets/qabstractspinbox.h \
+		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtGui/qvalidator.h \
+		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtCore/qregularexpression.h \
+		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtWidgets/qslider.h \
+		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtWidgets/qabstractslider.h \
+		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtWidgets/qstyle.h \
+		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtWidgets/qtabbar.h \
+		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtWidgets/qrubberband.h \
+		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtWidgets/QLabel \
+		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtWidgets/qlabel.h \
+		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtWidgets/QLineEdit \
+		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtWidgets/qlineedit.h \
+		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtGui/qtextcursor.h \
+		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtGui/qtextformat.h \
+		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtGui/qpen.h \
+		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtGui/qtextoption.h \
+		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtWidgets/QListWidget \
+		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtWidgets/qlistwidget.h \
+		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtWidgets/qlistview.h \
+		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtWidgets/QMenuBar \
+		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtWidgets/qmenubar.h \
+		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtWidgets/qmenu.h \
+		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtWidgets/QPushButton \
+		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtWidgets/qpushbutton.h \
+		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtWidgets/qabstractbutton.h \
+		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtWidgets/QSpacerItem \
+		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtWidgets/qlayoutitem.h \
+		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtWidgets/QStatusBar \
+		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtWidgets/qstatusbar.h \
+		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtWidgets/QToolBar \
+		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtWidgets/qtoolbar.h \
+		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtWidgets/QVBoxLayout \
+		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtWidgets/qboxlayout.h \
+		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtWidgets/qlayout.h \
+		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtWidgets/qgridlayout.h \
+		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtWidgets/QWidget \
 		../LibraryManagementSystem/book.h \
 		../LibraryManagementSystem/magazine.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\mainwindow.o ..\LibraryManagementSystem\mainwindow.cpp
@@ -539,7 +604,7 @@ debug/libraryitem.o: ../LibraryManagementSystem/libraryitem.cpp ../LibraryManage
 		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtCore/qcontiguouscache.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\libraryitem.o ..\LibraryManagementSystem\libraryitem.cpp
 
-debug/book.o: ../LibraryManagementSystem/book.cpp ../LibraryManagementSystem/Book.h \
+debug/book.o: ../LibraryManagementSystem/book.cpp ../LibraryManagementSystem/book.h \
 		../LibraryManagementSystem/libraryitem.h \
 		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtCore/QString \
 		C:/Qt/Qt5.3.0/5.3/mingw482_32/include/QtCore/qstring.h \

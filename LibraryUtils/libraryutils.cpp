@@ -12,6 +12,7 @@ QString LibraryUtils::getVersion() const {
     return QString("LibraryUtils v1.0");
 }
 
+// Saves a list of LibraryItem pointers (books or magazines) to a text file
 bool LibraryUtils::saveItems(const QList<LibraryItem*>& items, const QString& filename) {
     QFile file(filename);
     if (!file.open(QIODevice::WriteOnly | QIODevice::Text)) {
@@ -20,7 +21,10 @@ bool LibraryUtils::saveItems(const QList<LibraryItem*>& items, const QString& fi
     }
 
     QTextStream out(&file);
+
+    // Iterate through each library item and write details to the file
     for (const auto* item : items) {
+        // Use dynamic_cast to determine the actual type (Book or Magazine)
         if (Book* b = dynamic_cast<Book*>(const_cast<LibraryItem*>(item))) {
             out << "Book," << b->getId() << "," << b->getTitle() << "," << b->getAuthor() << "," << b->getGenre() << "," << b->isBorrowed() << "\n";
         } else if (Magazine* m = dynamic_cast<Magazine*>(const_cast<LibraryItem*>(item))) {
@@ -31,6 +35,7 @@ bool LibraryUtils::saveItems(const QList<LibraryItem*>& items, const QString& fi
     return true;
 }
 
+// Loads library items from a file and returns a list of LibraryItem pointers
 QList<LibraryItem*> LibraryUtils::loadItems(const QString& filename) {
     QList<LibraryItem*> loadedItems;
     QFile file(filename);
@@ -43,6 +48,7 @@ QList<LibraryItem*> LibraryUtils::loadItems(const QString& filename) {
     while (!in.atEnd()) {
         QString line = in.readLine();
         QStringList fields = line.split(",");
+        // Expecting at least 6 fields: type, id, title, author, genre/issue, borrowed
         if (fields.size() >= 6) {
             QString type = fields[0];
             QString id = fields[1];

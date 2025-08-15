@@ -5,6 +5,7 @@
 #include <QList>
 #include "libraryitem.h"
 
+// Utility class for handling library-related operations
 class LibraryUtils {
 public:
     LibraryUtils();

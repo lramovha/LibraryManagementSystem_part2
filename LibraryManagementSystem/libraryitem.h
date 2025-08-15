@@ -1,9 +1,11 @@
 #ifndef LIBRARYITEM_H
 #define LIBRARYITEM_H
 
-#include <QString>
-#include <QDebug>
+#include <QString>  // For using QString type
+#include <QDebug>   // For printing debug information
 
+
+// Base class for all library items (books, magazines)
 class LibraryItem {
 private:
     QString title;
@@ -12,6 +14,7 @@ private:
     bool borrowed;
 
 public:
+    // Constructor: initializes title, author, and id
     LibraryItem(const QString& title, const QString& author, const QString& id);
     virtual ~LibraryItem() = default;
 

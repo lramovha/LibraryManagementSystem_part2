@@ -25,7 +25,7 @@ HEADERS  += mainwindow.h \
 FORMS    += mainwindow.ui
 
 # Link to the built LibraryUtils library
-LIBS += -L"C:/Users/lasyr/Desktop/ZaLes/School/2025/UNISA/COS2614 - Programming Contemporary Concepts/assignment3/LibraryManagementSystem_part2/build-LibraryUtils-Desktop_Qt_5_3_0_MinGW_32bit-Release/release" -lLibraryUtils
+LIBS += -L$$PWD/../build-LibraryUtils-Desktop_Qt_5_3_0_MinGW_32bit-Release/release -lLibraryUtils
 
 INCLUDEPATH += $$PWD/../LibraryUtils
 DEPENDPATH += $$PWD/../LibraryUtils

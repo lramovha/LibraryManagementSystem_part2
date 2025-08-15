@@ -37,7 +37,7 @@ MainWindow::MainWindow(QWidget *parent)
 
 MainWindow::~MainWindow()
 {
-    // Save items to file before cleanup
+    // Save items to Library_data.txtx file before cleanup
     QString filename = "library_data.txt";
     utils->saveItems(items, filename);
 
@@ -58,7 +58,7 @@ void MainWindow::on_pushButtonAddBook_clicked() {
         items.append(book);
         ui->listWidgetItems->addItem(book->getTitle() + " by " + book->getAuthor() + " (Genre: " + book->getGenre() + ") - " + (book->isBorrowed() ? "Borrowed" : "Available"));
         book->displayInfo();
-        // Save immediately after adding
+        // Save immediately after adding file
         utils->saveItems(items, "library_data.txt");
         ui->lineEditTitleBook->clear();
         ui->lineEditAuthorBook->clear();
@@ -79,7 +79,7 @@ void MainWindow::on_pushButtonAddMagazine_clicked() {
         items.append(magazine);
         ui->listWidgetItems->addItem(magazine->getTitle() + " by " + magazine->getAuthor() + " - Issue " + QString::number(magazine->getIssueNumber()) + " - " + (magazine->isBorrowed() ? "Borrowed" : "Available"));
         magazine->displayInfo();
-        // Save immediately after adding
+        // Save immediately after adding file.
         utils->saveItems(items, "library_data.txt");
         ui->lineEditTitleMagazine->clear();
         ui->lineEditAuthorMagazine->clear();
