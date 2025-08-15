@@ -5,5 +5,5 @@ Magazine::Magazine(const QString& title, const QString& author, const QString& i
 }
 
 void Magazine::displayInfo() const {
-    qDebug() << "Magazine - ID:" << getId() << "Title:" << getTitle() << "Author:" << getAuthor() << "Issue:" << issueNumber;
+    qDebug() << "Magazine - ID:" << getId() << "Title:" << getTitle() << "Author:" << getAuthor() << "Issue:" << issueNumber << "Borrowed:" << (isBorrowed() ? "Yes" : "No");
 }

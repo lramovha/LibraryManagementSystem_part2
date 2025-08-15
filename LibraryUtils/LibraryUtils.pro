@@ -17,3 +17,8 @@ unix {
     target.path = /usr/lib
     INSTALLS += target
 }
+
+# Add include path to LibraryManagementSystem directory
+INCLUDEPATH += $$PWD/../LibraryManagementSystem
+
+CONFIG += c++11

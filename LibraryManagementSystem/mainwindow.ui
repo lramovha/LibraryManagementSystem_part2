@@ -23,7 +23,7 @@
       <item>
        <widget class="QLabel" name="label">
         <property name="text">
-         <string>Add Book</string>
+         <string>Add Book by: Title, Author, Book ID and Genre</string>
         </property>
        </widget>
       </item>
@@ -42,7 +42,7 @@
       <item>
        <widget class="QLabel" name="label_2">
         <property name="text">
-         <string>Add Magazine</string>
+         <string>Add Magazine by: Title, Author, Magazine ID and Issue Number</string>
         </property>
        </widget>
       </item>

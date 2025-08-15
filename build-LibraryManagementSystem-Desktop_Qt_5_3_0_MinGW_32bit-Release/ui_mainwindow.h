@@ -171,8 +171,8 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0));
-        label->setText(QApplication::translate("MainWindow", "Add Book", 0));
-        label_2->setText(QApplication::translate("MainWindow", "Add Magazine", 0));
+        label->setText(QApplication::translate("MainWindow", "Add Book by: Title, Author, Book ID and Genre", 0));
+        label_2->setText(QApplication::translate("MainWindow", "Add Magazine by: Title, Author, Magazine ID and Issue Number", 0));
         pushButtonAddBook->setText(QApplication::translate("MainWindow", "Add Book", 0));
         pushButtonAddMagazine->setText(QApplication::translate("MainWindow", "Add Magazine", 0));
         pushButtonSearch->setText(QApplication::translate("MainWindow", "Search", 0));

@@ -21,12 +21,12 @@ private slots:
     void on_pushButtonAddBook_clicked();
     void on_pushButtonAddMagazine_clicked();
     void on_pushButtonSearch_clicked();
+    void on_pushButtonBorrowReturn_clicked();
 
 private:
     Ui::MainWindow *ui;
     LibraryUtils* utils;
     QList<LibraryItem*> items;
-
 };
 
 #endif // MAINWINDOW_H
