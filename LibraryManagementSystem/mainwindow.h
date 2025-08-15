@@ -20,6 +20,7 @@ public:
 private slots:
     void on_pushButtonAddBook_clicked();
     void on_pushButtonAddMagazine_clicked();
+    void on_pushButtonSearch_clicked();
 
 private:
     Ui::MainWindow *ui;
