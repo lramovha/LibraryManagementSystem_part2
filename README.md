@@ -37,3 +37,8 @@ Requirements:
   - Store book and magazine data in a file (e.g., library_data.txt).
   - Load the data when the application starts.
   - Save new entries when a book or magazine is added.
+
+# Application Preview
+<img width="1692" height="892" alt="Screenshot 2025-11-30 110958" src="https://github.com/user-attachments/assets/e3b23fa7-1025-43b2-8d0e-5b8575b6ad03" />
+
+
