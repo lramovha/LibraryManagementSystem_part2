@@ -6,7 +6,7 @@ books, borrowing books, and returning books, with the use of Qt Lists, Qt Librar
 and standard containers to enhance functionality.
 Requirements:
 
-1. Class Design (OOP Concepts)
+# 1. Class Design (OOP Concepts)
   - Create a base class LibraryItem that contains attributes like title, author, and id.
   - Create derived classes Book and Magazine that inherit from LibraryItem and add relevant attributes (e.g., genre for Book, issueNumber for Magazine).
   - Implement encapsulation by making member variables private and using getter and setter methods.
