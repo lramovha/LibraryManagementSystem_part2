@@ -1,4 +1,4 @@
-#Assignment Description:
+# Assignment Description:
 
 You are required to develop a Windows based Library Management System using C++ and
 Qt. The system should allow users to perform operations such as adding books, searching for
