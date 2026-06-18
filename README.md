@@ -1,44 +1,69 @@
-# Assignment Description:
+# Library Management System (C++ / Qt)
 
-You are required to develop a Windows based Library Management System using C++ and
-Qt. The system should allow users to perform operations such as adding books, searching for
-books, borrowing books, and returning books, with the use of Qt Lists, Qt Libraries, generics,
-and standard containers to enhance functionality.
-Requirements:
+A Windows desktop application for managing a small library's catalog — built with C++ and Qt Widgets. The system supports adding, searching, borrowing, and returning books and magazines, and demonstrates core OOP design, Qt's model/view framework, generic programming, and a custom Qt library.
 
-## 1. Class Design (OOP Concepts)
-  - Create a base class LibraryItem that contains attributes like title, author, and id.
-  - Create derived classes Book and Magazine that inherit from LibraryItem and add relevant attributes (e.g., genre for Book, issueNumber for Magazine).
-  - Implement encapsulation by making member variables private and using getter and setter methods.
-  - Implement polymorphism by creating a virtual function displayInfo() in the base class and overriding it in derived classes.
+## Application Preview
 
-## 2. Use of Qt Lists and Containers
-  -  Store the list of books and magazines using QList<LibraryItem*>.
-  - Implement sorting and filtering operations using std::vector or QList.
-  - Display book/magazine details in a QListWidget.
-  - Implement searching and filtering using QListView and QSortFilterProxyModel.
+![Application Preview](https://github.com/user-attachments/assets/e3b23fa7-1025-43b2-8d0e-5b8575b6ad03)
 
-## 3. Use of Custom Qt Library 
-  - Create a separate Qt library (LibraryUtils) for utility functions such as data persistence, sorting, and searching.
-  - Use this library in your main application to handle book operations.
+## Overview
 
-## 4. Implementation of Generics (Templates)
-  - Create a generic template class Storage<T> to store and manage LibraryItem objects.
-  - Implement member functions for adding, removing, and searching within the storage.
-  - Demonstrate the use of this class for managing books and magazines.
+This project implements a library catalog system where items are represented through a small class hierarchy and managed through a Qt-based GUI, with persistence to a local data file. It was built to demonstrate object-oriented design, Qt's list/view widgets, a custom utility library, and generic (template-based) storage, alongside a working file-backed data layer.
 
-## 5. Graphical User Interface using Qt Widgets
-  - Design a main window using Qt Widgets (QMainWindow, QWidget, QVBoxLayout, etc.).
-  - Include input fields to add books and magazines.
-  - Provide buttons to search, borrow, and return books.
-  o Display a list of available books/magazines using QListWidget or QTableWidget.
+## Features
 
-## 6. File Handling for Data Persistence
-  - Store book and magazine data in a file (e.g., library_data.txt).
-  - Load the data when the application starts.
-  - Save new entries when a book or magazine is added.
+### Class design (OOP)
+A base `LibraryItem` class holds shared attributes — title, author, and ID — with member variables kept private and accessed through getters and setters. `Book` and `Magazine` derive from `LibraryItem`, adding their own attributes (genre and issue number respectively) and overriding a virtual `displayInfo()` method to demonstrate polymorphism.
 
-# Application Preview
-<img width="1692" height="892" alt="Screenshot 2025-11-30 110958" src="https://github.com/user-attachments/assets/e3b23fa7-1025-43b2-8d0e-5b8575b6ad03" />
+### Qt lists and containers
+Library items are stored as `QList<LibraryItem*>`, with sorting and filtering implemented using `std::vector` and `QList`. Item details are displayed using `QListWidget`, and search/filtering is implemented with `QListView` paired with `QSortFilterProxyModel`.
 
+### Custom Qt library — LibraryUtils
+A separate Qt library, **LibraryUtils**, handles utility logic such as data persistence, sorting, and searching, independently of the UI layer. The main application links against this library to perform book and magazine operations.
+
+### Generics (templates)
+A generic `Storage<T>` template class manages collections of `LibraryItem` objects, with member functions for adding, removing, and searching. The same `Storage<T>` is used to manage both books and magazines.
+
+### Graphical user interface
+The main window is built with Qt Widgets (`QMainWindow`, `QWidget`, `QVBoxLayout`, etc.), with input fields for adding books and magazines, buttons for searching, borrowing, and returning items, and a `QListWidget`/`QTableWidget` view of all available items.
+
+### File-based persistence
+Book and magazine data is stored in a local file (e.g. `library_data.txt`). Existing data loads automatically on startup, and new entries are saved as they're added.
+
+## Project Structure
+
+```
+LibraryManagementSystem_part2/
+├── LibraryManagementSystem/   # Main Qt Widgets application
+├── LibraryUtils/              # Custom Qt library (persistence, sorting, searching)
+└── README.md
+```
+
+## Tech Stack
+
+- **Language:** C++
+- **Framework:** Qt Widgets
+- **Build system:** qmake
+- **Platform:** Windows
+
+## Getting Started
+
+### Prerequisites
+
+- Qt (with Qt Widgets module) — Qt Creator is recommended
+- A C++ compiler compatible with your Qt installation (e.g. MinGW or MSVC on Windows)
+
+### Setup
+
+1. Clone the repository
+   ```bash
+   git clone https://github.com/lramovha/LibraryManagementSystem_part2.git
+   ```
+2. Open the project in Qt Creator by loading the `.pro` file inside `LibraryManagementSystem/`.
+3. Ensure the `LibraryUtils` library is built first (or configured as a dependency/subproject) so the main application can link against it.
+4. Build and run the project from Qt Creator, or build via the command line with `qmake` and `make`/`mingw32-make`.
+
+## Author
+
+**[lramovha](https://github.com/lramovha)**
 
